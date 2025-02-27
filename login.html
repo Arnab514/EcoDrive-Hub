@@ -1,0 +1,316 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - EcoDrive Hub</title>
+    <meta name="description" content="Log in to your EcoDrive Hub account to access personalized EV resources and recommendations." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <span class="logo-text">EcoDrive Hub</span>
+          </a>
+          <nav class="main-nav">
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="vehicles.html">EV & PHEV</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="login.html" class="active nav-cta">Login</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="auth-section">
+        <div class="container">
+          <div class="auth-container animate-fade-in">
+            <div class="auth-tabs">
+              <button class="auth-tab active" data-tab="login">Login</button>
+              <button class="auth-tab" data-tab="register">Register</button>
+            </div>
+
+            <div class="auth-forms">
+              <form id="loginForm" class="auth-form active">
+                <h2>Welcome Back</h2>
+                <p class="auth-subtitle">Log in to access your account</p>
+
+                <div class="form-group">
+                  <label for="loginEmail">Email Address</label>
+                  <input type="email" id="loginEmail" name="email" placeholder="Your email address" required />
+                </div>
+
+                <div class="form-group password-group">
+                  <label for="loginPassword">Password</label>
+                  <div class="password-input-container">
+                    <input type="password" id="loginPassword" name="password" placeholder="Your password" required />
+                    <button type="button" class="password-toggle">
+                      <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                      <svg class="eye-off-icon hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form-group remember-forgot">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="remember" />
+                    <span>Remember me</span>
+                  </label>
+                  <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">Log In</button>
+
+                <div class="auth-divider">
+                  <span>Or continue with</span>
+                </div>
+
+                <div class="social-login">
+                  <button type="button" class="social-btn google">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                      <path
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        fill="#4285F4"
+                      />
+                      <path
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        fill="#34A853"
+                      />
+                      <path
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                        fill="#FBBC05"
+                      />
+                      <path
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                        fill="#EA4335"
+                      />
+                    </svg>
+                    Google
+                  </button>
+                  <button type="button" class="social-btn apple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M16.5 3c-2.026 0-3.226 1.328-4.513 1.328-1.276 0-2.476-1.318-4.502-1.318-1.876 0-3.887 1.089-4.985 3.496-1.341 2.926-.691 7.319 1.056 11.092.761 1.657 1.685 3.516 2.944 3.522h.093c1.145 0 1.483-.74 3.081-.747h.151c1.598 0 1.888.747 3.034.747h.093c1.258-.006 2.267-2.055 3.027-3.712.481-1.038.678-1.552 1.021-2.722-2.588-1.206-3-4.967-3-4.995.032-2.47 2-3.697 2.027-3.697-1.143-1.642-2.87-1.718-3.527-1.742zm-1.204-2.982c-.78.051-1.701.398-2.455.968-.688.519-1.247 1.262-1.298 2.004.788-.104 1.576-.393 2.277-.922.701-.529 1.307-1.292 1.476-2.05z"
+                      />
+                    </svg>
+                    Apple
+                  </button>
+                </div>
+              </form>
+
+              <form id="registerForm" class="auth-form">
+                <h2>Create Account</h2>
+                <p class="auth-subtitle">Join our community of EV enthusiasts</p>
+
+                <div class="form-group">
+                  <label for="registerName">Full Name</label>
+                  <input type="text" id="registerName" name="name" placeholder="Your full name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="registerEmail">Email Address</label>
+                  <input type="email" id="registerEmail" name="email" placeholder="Your email address" required />
+                </div>
+
+                <div class="form-group password-group">
+                  <label for="registerPassword">Password</label>
+                  <div class="password-input-container">
+                    <input type="password" id="registerPassword" name="password" placeholder="Create a password" required />
+                    <button type="button" class="password-toggle">
+                      <svg class="eye-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                      </svg>
+                      <svg class="eye-off-icon hidden" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="password-strength">
+                    <div class="strength-meter">
+                      <div class="strength-segment"></div>
+                      <div class="strength-segment"></div>
+                      <div class="strength-segment"></div>
+                      <div class="strength-segment"></div>
+                    </div>
+                    <span class="strength-text">Password strength</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="terms" required />
+                    <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">Create Account</button>
+
+                <div class="auth-divider">
+                  <span>Or register with</span>
+                </div>
+
+                <div class="social-login">
+                  <button type="button" class="social-btn google">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                      <path
+                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+                        fill="#4285F4"
+                      />
+                      <path
+                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+                        fill="#34A853"
+                      />
+                      <path
+                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+                        fill="#FBBC05"
+                      />
+                      <path
+                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+                        fill="#EA4335"
+                      />
+                    </svg>
+                    Google
+                  </button>
+                  <button type="button" class="social-btn apple">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M16.5 3c-2.026 0-3.226 1.328-4.513 1.328-1.276 0-2.476-1.318-4.502-1.318-1.876 0-3.887 1.089-4.985 3.496-1.341 2.926-.691 7.319 1.056 11.092.761 1.657 1.685 3.516 2.944 3.522h.093c1.145 0 1.483-.74 3.081-.747h.151c1.598 0 1.888.747 3.034.747h.093c1.258-.006 2.267-2.055 3.027-3.712.481-1.038.678-1.552 1.021-2.722-2.588-1.206-3-4.967-3-4.995.032-2.47 2-3.697 2.027-3.697-1.143-1.642-2.87-1.718-3.527-1.742zm-1.204-2.982c-.78.051-1.701.398-2.455.968-.688.519-1.247 1.262-1.298 2.004.788-.104 1.576-.393 2.277-.922.701-.529 1.307-1.292 1.476-2.05z"
+                      />
+                    </svg>
+                    Apple
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="auth-image animate-fade-in">
+            <!-- <img src="images/login-image.jpg" alt="Electric vehicle charging" /> -->
+            <div class="auth-image-overlay"></div>
+            <div class="auth-image-content">
+              <h2>Join the Electric Revolution</h2>
+              <p>
+                Create an account to access personalized EV recommendations, charging station maps, and exclusive resources for electric
+                vehicle owners and enthusiasts.
+              </p>
+              <ul class="auth-benefits">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Personalized vehicle recommendations
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Interactive charging station map
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  EV ownership cost calculator
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Exclusive guides and resources
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-text">EcoDrive Hub</span>
+            <p>Driving the future forward.</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3>Navigation</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="vehicles.html">EV & PHEV</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="#">EV Incentives</a></li>
+                <li><a href="#">Charging Map</a></li>
+                <li><a href="#">Buyer's Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Connect</h3>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest EV news and updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 EcoDrive Hub. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

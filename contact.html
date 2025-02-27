@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - EcoDrive Hub</title>
+    <meta name="description" content="Get in touch with EcoDrive Hub for questions about electric vehicles, charging solutions, and more." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <span class="logo-text">EcoDrive Hub</span>
+          </a>
+          <nav class="main-nav">
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="vehicles.html">EV & PHEV</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+              <li><a href="login.html" class="nav-cta">Login</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero-content">
+            <h1 class="page-title animate-fade-in">Contact Us<span class="accent">.</span></h1>
+            <p class="page-subtitle animate-fade-in delay-200">
+              Have questions about electric vehicles? Our team is here to help.
+            </p>
+          </div>
+        </div>
+        <div class="page-hero-image-container">
+          <img src="images/contact-hero.jpg" alt="Customer service representative" class="page-hero-image" />
+          <div class="page-hero-overlay"></div>
+        </div>
+      </section>
+
+      <section class="contact-options section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-card animate-fade-in">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <h3>Call Us</h3>
+              <p>Our customer service team is available Monday through Friday, 9am-5pm.</p>
+              <a href="tel:+18005551234" class="contact-link">+1 (800) 555-1234</a>
+            </div>
+
+            <div class="contact-card animate-fade-in delay-200">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <h3>Email Us</h3>
+              <p>Send us an email and we'll get back to you within 24 hours.</p>
+              <a href="mailto:info@ecoDrivehub.com" class="contact-link">info@ecodrivehub.com</a>
+            </div>
+
+            <div class="contact-card animate-fade-in delay-400">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h3>Visit Us</h3>
+              <p>Stop by our headquarters for a personalized consultation.</p>
+              <address class="contact-address">
+                123 Electric Avenue<br />
+                San Francisco, CA 94105
+              </address>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form-section section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag animate-fade-in">Get In Touch</span>
+            <h2 class="section-title animate-fade-in">Send Us a Message</h2>
+            <p class="section-subtitle animate-fade-in">
+              Fill out the form below and we'll get back to you as soon as possible.
+            </p>
+          </div>
+
+          <div class="contact-form-container animate-fade-in">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number (optional)" />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="vehicles">Vehicle Information</option>
+                  <option value="charging">Charging Solutions</option>
+                  <option value="test-drive">Request a Test Drive</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Your message" required></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" checked />
+                  <span>Subscribe to our newsletter for the latest EV news and updates</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0835927339667!2d-122.40311538468173!3d37.79053797975642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858061823e2a2d%3A0x8d684590d450c5e!2sFinancial%20District%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1618870592060!5m2!1sen!2sus"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="faq-section section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag animate-fade-in">FAQs</span>
+            <h2 class="section-title animate-fade-in">Frequently Asked Questions</h2>
+            <p class="section-subtitle animate-fade-in">
+              Find answers to common questions about electric vehicles and charging.
+            </p>
+          </div>
+
+          <div class="faq-container animate-fade-in">
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How long does it take to charge an electric vehicle?</h3>
+                <span class="faq-icon"></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Charging times vary depending on the battery size and charger type. Level 1 (standard outlet) charging can take 8-24
+                  hours for a full charge. Level 2 (240V) charging typically takes 4-8 hours. DC fast charging can provide 80% charge in
+                  20-30 minutes for compatible vehicles.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>What incentives are available for purchasing an electric vehicle?</h3>
+                <span class="faq-icon"></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Many incentives are available, including federal tax credits up to $7,500, state rebates, utility incentives, HOV lane
+                  access, and reduced registration fees. Incentives vary by location and vehicle type, so it's best to check local
+                  offerings.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How far can electric vehicles travel on a single charge?</h3>
+                <span class="faq-icon"></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Modern electric vehicles offer ranges from 150 to over 400 miles on a single charge, depending on the model. Most EVs
+                  now provide enough range for daily commuting and many long-distance trips with strategic charging stops.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>Are electric vehicles more expensive than gas vehicles?</h3>
+                <span class="faq-icon"></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Electric vehicles often have higher upfront costs, but total cost of ownership is typically lower due to reduced fuel
+                  costs (electricity vs. gasoline), lower maintenance costs (fewer moving parts), and available incentives. As battery
+                  technology improves, initial costs continue to decrease.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <h3>How long do electric vehicle batteries last?</h3>
+                <span class="faq-icon"></span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Most electric vehicle manufacturers offer 8-10 year/100,000+ mile warranties on their batteries. In practice, EV
+                  batteries typically retain 70-80% of their original capacity after 10 years of use. Many factors affect battery life,
+                  including charging habits, temperature extremes, and usage patterns.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-text">EcoDrive Hub</span>
+            <p>Driving the future forward.</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3>Navigation</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="vehicles.html">EV & PHEV</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="#">EV Incentives</a></li>
+                <li><a href="#">Charging Map</a></li>
+                <li><a href="#">Buyer's Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Connect</h3>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest EV news and updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 EcoDrive Hub. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
+  </body>
+</html>

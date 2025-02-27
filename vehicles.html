@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EV & PHEV Vehicles - EcoDrive Hub</title>
+    <meta name="description" content="Explore electric and plug-in hybrid vehicles - compare models, features, and specifications." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <span class="logo-text">EcoDrive Hub</span>
+          </a>
+          <nav class="main-nav">
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="vehicles.html" class="active">EV & PHEV</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="login.html" class="nav-cta">Login</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="page-hero-content">
+            <h1 class="page-title animate-fade-in">Electric Vehicles<span class="accent">.</span></h1>
+            <p class="page-subtitle animate-fade-in delay-200">
+              Explore the latest EVs and PHEVs designed for performance, range, and efficiency.
+            </p>
+          </div>
+        </div>
+        <div class="page-hero-image-container">
+          <!-- <img src="images/vehicles-hero.jpg" alt="Electric vehicles lineup" class="page-hero-image" /> -->
+          <div class="page-hero-overlay"></div>
+        </div>
+      </section>
+
+      <section class="vehicle-filter section">
+        <div class="container">
+          <div class="filter-container animate-fade-in">
+            <div class="filter-group">
+              <label for="vehicle-type">Vehicle Type</label>
+              <select id="vehicle-type" class="filter-select">
+                <option value="all">All Types</option>
+                <option value="bev">Battery Electric (BEV)</option>
+                <option value="phev">Plug-in Hybrid (PHEV)</option>
+                <option value="hev">Hybrid (HEV)</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="vehicle-category">Category</label>
+              <select id="vehicle-category" class="filter-select">
+                <option value="all">All Categories</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="hatchback">Hatchback</option>
+                <option value="truck">Truck</option>
+                <option value="luxury">Luxury</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="range-filter">Min. Range</label>
+              <select id="range-filter" class="filter-select">
+                <option value="0">Any Range</option>
+                <option value="100">100+ miles</option>
+                <option value="200">200+ miles</option>
+                <option value="300">300+ miles</option>
+                <option value="400">400+ miles</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="price-filter">Price Range</label>
+              <select id="price-filter" class="filter-select">
+                <option value="all">Any Price</option>
+                <option value="economy">Under $35,000</option>
+                <option value="midrange">$35,000 - $60,000</option>
+                <option value="premium">$60,000 - $100,000</option>
+                <option value="luxury">$100,000+</option>
+              </select>
+            </div>
+
+            <button id="filter-btn" class="btn btn-primary">Apply Filters</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="vehicles-grid section">
+        <div class="container">
+          <div class="vehicles-container">
+            <!-- BEV Section -->
+            <div class="vehicle-category">
+              <h2 class="animate-fade-in">Battery Electric Vehicles (BEV)</h2>
+              <div class="vehicle-cards">
+                <div class="vehicle-card animate-fade-in" data-type="bev" data-category="sedan" data-range="350" data-price="midrange">
+                  <div class="vehicle-card-image">
+                    <img src="images/vehicle-1.jpeg" alt="Model E Sedan" />
+                  </div>
+                  <div class="vehicle-card-content">
+                    <h3>Model E Sedan</h3>
+                    <div class="vehicle-specs">
+                      <div class="spec">
+                        <span class="spec-label">Range</span>
+                        <span class="spec-value">350 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">0-60 mph</span>
+                        <span class="spec-value">4.2s</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Top Speed</span>
+                        <span class="spec-value">155 mph</span>
+                      </div>
+                    </div>
+                    <div class="vehicle-price">Starting at $45,900</div>
+                    <div class="vehicle-card-actions">
+                      <button class="btn btn-outline vehicle-details-btn">View Details</button>
+                    </div>
+                  </div>
+
+                  <div class="vehicle-details-popup">
+                    <div class="vehicle-popup-content">
+                      <button class="close-popup">&times;</button>
+                      <div class="vehicle-popup-header">
+                        <h3>Model E Sedan</h3>
+                        <p class="vehicle-type-tag">Battery Electric</p>
+                      </div>
+                      <div class="vehicle-popup-image">
+                        <!-- <img src="images/vehicle-1-large.jpg" alt="Model E Sedan" /> -->
+                      </div>
+                      <div class="vehicle-popup-specs">
+                        <div class="popup-spec">
+                          <span class="popup-spec-label">Range</span>
+                          <span class="popup-spec-value">350 miles</span>
+                        </div>
+                        <div class="popup-spec">
+                          <span class="popup-spec-label">Battery</span>
+                          <span class="popup-spec-value">85 kWh</span>
+                        </div>
+                        <div class="popup-spec">
+                          <span class="popup-spec-label">Power</span>
+                          <span class="popup-spec-value">346 hp</span>
+                        </div>
+                        <div class="popup-spec">
+                          <span class="popup-spec-label">Torque</span>
+                          <span class="popup-spec-value">428 lb-ft</span>
+                        </div>
+                        <div class="popup-spec">
+                          <span class="popup-spec-label">0-60 mph</span>
+                          <span class="popup-spec-value">4.2 seconds</span>
+                        </div>
+                        <div class="popup-spec">
+                          <span class="popup-spec-label">Top Speed</span>
+                          <span class="popup-spec-value">155 mph</span>
+                        </div>
+                        <div class="popup-spec">
+                          <span class="popup-spec-label">Fast Charging</span>
+                          <span class="popup-spec-value">10-80% in 30 min</span>
+                        </div>
+                        <div class="popup-spec">
+                          <span class="popup-spec-label">Cargo Space</span>
+                          <span class="popup-spec-value">25 cu ft</span>
+                        </div>
+                      </div>
+                      <div class="vehicle-popup-description">
+                        <p>
+                          The Model E Sedan is a high-performance electric vehicle that combines luxury, technology, and efficiency. With
+                          its sleek design and impressive range, it's perfect for daily commuting and long-distance travel. Advanced
+                          driver assistance features and a premium interior make every journey comfortable and enjoyable.
+                        </p>
+                      </div>
+                      <div class="vehicle-popup-features">
+                        <h4>Key Features</h4>
+                        <ul>
+                          <li>15-inch touchscreen infotainment system</li>
+                          <li>Advanced driver assistance system</li>
+                          <li>Glass panoramic roof</li>
+                          <li>Premium audio system with 14 speakers</li>
+                          <li>Over-the-air software updates</li>
+                          <li>Dual-motor all-wheel drive</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-card animate-fade-in delay-200" data-type="bev" data-category="suv" data-range="310" data-price="premium">
+                  <div class="vehicle-card-image">
+                    <img src="images/vehicle-2.jpeg" alt="Adventure SUV" />
+                  </div>
+                  <div class="vehicle-card-content">
+                    <h3>Adventure SUV</h3>
+                    <div class="vehicle-specs">
+                      <div class="spec">
+                        <span class="spec-label">Range</span>
+                        <span class="spec-value">310 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">0-60 mph</span>
+                        <span class="spec-value">3.8s</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Top Speed</span>
+                        <span class="spec-value">145 mph</span>
+                      </div>
+                    </div>
+                    <div class="vehicle-price">Starting at $65,900</div>
+                    <div class="vehicle-card-actions">
+                      <button class="btn btn-outline vehicle-details-btn">View Details</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-card animate-fade-in delay-400" data-type="bev" data-category="hatchback" data-range="250" data-price="economy">
+                  <div class="vehicle-card-image">
+                    <img src="images/vehicle-3.jpeg" alt="Urban EV" />
+                  </div>
+                  <div class="vehicle-card-content">
+                    <h3>Urban EV</h3>
+                    <div class="vehicle-specs">
+                      <div class="spec">
+                        <span class="spec-label">Range</span>
+                        <span class="spec-value">250 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">0-60 mph</span>
+                        <span class="spec-value">6.5s</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Top Speed</span>
+                        <span class="spec-value">110 mph</span>
+                      </div>
+                    </div>
+                    <div class="vehicle-price">Starting at $32,900</div>
+                    <div class="vehicle-card-actions">
+                      <button class="btn btn-outline vehicle-details-btn">View Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PHEV Section -->
+            <div class="vehicle-category">
+              <h2 class="animate-fade-in">Plug-in Hybrid Electric Vehicles (PHEV)</h2>
+              <div class="vehicle-cards">
+                <div class="vehicle-card animate-fade-in" data-type="phev" data-category="suv" data-range="40" data-price="midrange">
+                  <div class="vehicle-card-image">
+                    <img src="images/vehicle-4.jpeg" alt="Explorer PHEV" />
+                  </div>
+                  <div class="vehicle-card-content">
+                    <h3>Explorer PHEV</h3>
+                    <div class="vehicle-specs">
+                      <div class="spec">
+                        <span class="spec-label">EV Range</span>
+                        <span class="spec-value">40 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Total Range</span>
+                        <span class="spec-value">520 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">MPGe</span>
+                        <span class="spec-value">78</span>
+                      </div>
+                    </div>
+                    <div class="vehicle-price">Starting at $43,900</div>
+                    <div class="vehicle-card-actions">
+                      <button class="btn btn-outline vehicle-details-btn">View Details</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-card animate-fade-in delay-200" data-type="phev" data-category="sedan" data-range="55" data-price="premium">
+                  <div class="vehicle-card-image">
+                    <img src="images/vehicle-5.jpeg" alt="Fusion PHEV" />
+                  </div>
+                  <div class="vehicle-card-content">
+                    <h3>Fusion PHEV</h3>
+                    <div class="vehicle-specs">
+                      <div class="spec">
+                        <span class="spec-label">EV Range</span>
+                        <span class="spec-value">55 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Total Range</span>
+                        <span class="spec-value">540 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">MPGe</span>
+                        <span class="spec-value">85</span>
+                      </div>
+                    </div>
+                    <div class="vehicle-price">Starting at $49,900</div>
+                    <div class="vehicle-card-actions">
+                      <button class="btn btn-outline vehicle-details-btn">View Details</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-card animate-fade-in delay-400" data-type="phev" data-category="luxury" data-range="38" data-price="luxury">
+                  <div class="vehicle-card-image">
+                    <img src="images/vehicle-6.jpeg" alt="Luxury PHEV" />
+                  </div>
+                  <div class="vehicle-card-content">
+                    <h3>Luxury PHEV</h3>
+                    <div class="vehicle-specs">
+                      <div class="spec">
+                        <span class="spec-label">EV Range</span>
+                        <span class="spec-value">38 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Total Range</span>
+                        <span class="spec-value">500 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">MPGe</span>
+                        <span class="spec-value">70</span>
+                      </div>
+                    </div>
+                    <div class="vehicle-price">Starting at $105,900</div>
+                    <div class="vehicle-card-actions">
+                      <button class="btn btn-outline vehicle-details-btn">View Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- HEV Section -->
+            <div class="vehicle-category">
+              <h2 class="animate-fade-in">Hybrid Electric Vehicles (HEV)</h2>
+              <div class="vehicle-cards">
+                <div class="vehicle-card animate-fade-in" data-type="hev" data-category="sedan" data-range="0" data-price="economy">
+                  <div class="vehicle-card-image">
+                    <img src="images/vehicle-7.jpeg" alt="EcoHybrid Sedan" />
+                  </div>
+                  <div class="vehicle-card-content">
+                    <h3>EcoHybrid Sedan</h3>
+                    <div class="vehicle-specs">
+                      <div class="spec">
+                        <span class="spec-label">MPG</span>
+                        <span class="spec-value">52</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Total Range</span>
+                        <span class="spec-value">600 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Horsepower</span>
+                        <span class="spec-value">192 hp</span>
+                      </div>
+                    </div>
+                    <div class="vehicle-price">Starting at $29,900</div>
+                    <div class="vehicle-card-actions">
+                      <button class="btn btn-outline vehicle-details-btn">View Details</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vehicle-card animate-fade-in delay-200" data-type="hev" data-category="suv" data-range="0" data-price="midrange">
+                  <div class="vehicle-card-image">
+                    <img src="images/vehicle-8.jpeg" alt="Family Hybrid SUV" />
+                  </div>
+                  <div class="vehicle-card-content">
+                    <h3>Family Hybrid SUV</h3>
+                    <div class="vehicle-specs">
+                      <div class="spec">
+                        <span class="spec-label">MPG</span>
+                        <span class="spec-value">43</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Total Range</span>
+                        <span class="spec-value">580 mi</span>
+                      </div>
+                      <div class="spec">
+                        <span class="spec-label">Horsepower</span>
+                        <span class="spec-value">243 hp</span>
+                      </div>
+                    </div>
+                    <div class="vehicle-price">Starting at $42,900</div>
+                    <div class="vehicle-card-actions">
+                      <button class="btn btn-outline vehicle-details-btn">View Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vehicle-comparison section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag animate-fade-in">Compare</span>
+            <h2 class="section-title animate-fade-in">EV vs. PHEV vs. HEV</h2>
+            <p class="section-subtitle animate-fade-in">
+              Understanding the differences between electric vehicle types.
+            </p>
+          </div>
+
+          <div class="comparison-table-container animate-fade-in">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Battery Electric (BEV)</th>
+                  <th>Plug-in Hybrid (PHEV)</th>
+                  <th>Hybrid (HEV)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Power Source</td>
+                  <td>100% Electric</td>
+                  <td>Electric + Gasoline</td>
+                  <td>Primarily Gasoline + Self-charging Electric</td>
+                </tr>
+                <tr>
+                  <td>Electric Range</td>
+                  <td>200-400+ miles</td>
+                  <td>25-55 miles</td>
+                  <td>1-2 miles (limited)</td>
+                </tr>
+                <tr>
+                  <td>Charging</td>
+                  <td>Required (L1, L2, DC Fast)</td>
+                  <td>Optional (L1, L2)</td>
+                  <td>No external charging</td>
+                </tr>
+                <tr>
+                  <td>Emissions</td>
+                  <td>Zero tailpipe emissions</td>
+                  <td>Zero in EV mode, low in hybrid mode</td>
+                  <td>Lower than conventional vehicles</td>
+                </tr>
+                <tr>
+                  <td>Maintenance</td>
+                  <td>Minimal (no oil changes)</td>
+                  <td>Moderate (engine + electric)</td>
+                  <td>Regular (similar to gas vehicles)</td>
+                </tr>
+                <tr>
+                  <td>Fuel Savings</td>
+                  <td>Highest</td>
+                  <td>High</td>
+                  <td>Moderate</td>
+                </tr>
+                <tr>
+                  <td>Best For</td>
+                  <td>Daily commuting, environmentally conscious</td>
+                  <td>Mixed driving, limited charging access</td>
+                  <td>High mileage, no charging access</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="animate-fade-in">Find Your Perfect Electric Vehicle</h2>
+            <p class="animate-fade-in delay-200">
+              Ready to make the switch? Contact us for personalized recommendations.
+            </p>
+            <div class="cta-buttons animate-fade-in delay-400">
+              <a href="contact.html" class="btn btn-primary">Contact an Expert</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <span class="logo-text">EcoDrive Hub</span>
+            <p>Driving the future forward.</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-links-column">
+              <h3>Navigation</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="vehicles.html">EV & PHEV</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="#">EV Incentives</a></li>
+                <li><a href="#">Charging Map</a></li>
+                <li><a href="#">Buyer's Guide</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-links-column">
+              <h3>Connect</h3>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest EV news and updates.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 EcoDrive Hub. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/vehicle-filter.js"></script>
+  </body>
+</html>
